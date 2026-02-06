@@ -1,0 +1,192 @@
+- name: add
+  operator_name: add
+  overload_name: Tensor
+  manual_kernel_registration: false
+  category_override: ''
+  schema_string: aten::add.Tensor(Tensor self, Tensor other, *, Scalar alpha=1) -> Tensor
+  arguments:
+  - annotation: null
+    dynamic_type: at::Tensor
+    is_nullable: false
+    name: self
+    type: const at::Tensor &
+  - annotation: null
+    dynamic_type: at::Tensor
+    is_nullable: false
+    name: other
+    type: const at::Tensor &
+  - annotation: null
+    default: 1
+    dynamic_type: const at::Scalar &
+    is_nullable: false
+    kwarg_only: true
+    name: alpha
+    type: const at::Scalar &
+  schema_order_cpp_signature: at::Tensor (const at::Tensor &, const at::Tensor &, const at::Scalar &)
+  schema_order_arguments:
+  - annotation: null
+    dynamic_type: at::Tensor
+    is_nullable: false
+    name: self
+    type: const at::Tensor &
+  - annotation: null
+    dynamic_type: at::Tensor
+    is_nullable: false
+    name: other
+    type: const at::Tensor &
+  - annotation: null
+    default: 1
+    dynamic_type: const at::Scalar &
+    is_nullable: false
+    kwarg_only: true
+    name: alpha
+    type: const at::Scalar &
+  method_of:
+  - Type
+  - Tensor
+  - namespace
+  mode: native
+  python_module: ''
+  returns:
+  - dynamic_type: at::Tensor
+    name: result
+    type: at::Tensor
+  inplace: false
+  is_factory_method: false
+  abstract: true
+  device_guard: true
+  with_gil: false
+  deprecated: false
+  has_math_kernel: false
+- name: add_
+  operator_name: add_
+  overload_name: Tensor
+  manual_kernel_registration: false
+  category_override: ''
+  schema_string: aten::add_.Tensor(Tensor(a!) self, Tensor other, *, Scalar alpha=1) -> Tensor(a!)
+  arguments:
+  - annotation: a!
+    dynamic_type: at::Tensor
+    is_nullable: false
+    name: self
+    type: at::Tensor &
+  - annotation: null
+    dynamic_type: at::Tensor
+    is_nullable: false
+    name: other
+    type: const at::Tensor &
+  - annotation: null
+    default: 1
+    dynamic_type: const at::Scalar &
+    is_nullable: false
+    kwarg_only: true
+    name: alpha
+    type: const at::Scalar &
+  schema_order_cpp_signature: at::Tensor & (at::Tensor &, const at::Tensor &, const at::Scalar &)
+  schema_order_arguments:
+  - annotation: a!
+    dynamic_type: at::Tensor
+    is_nullable: false
+    name: self
+    type: at::Tensor &
+  - annotation: null
+    dynamic_type: at::Tensor
+    is_nullable: false
+    name: other
+    type: const at::Tensor &
+  - annotation: null
+    default: 1
+    dynamic_type: const at::Scalar &
+    is_nullable: false
+    kwarg_only: true
+    name: alpha
+    type: const at::Scalar &
+  method_of:
+  - Type
+  - Tensor
+  mode: native
+  python_module: ''
+  returns:
+  - dynamic_type: at::Tensor
+    name: self
+    type: at::Tensor &
+  inplace: true
+  is_factory_method: false
+  abstract: true
+  device_guard: true
+  with_gil: false
+  deprecated: false
+  has_math_kernel: false
+- name: add_out
+  operator_name: add
+  overload_name: out
+  manual_kernel_registration: false
+  category_override: ''
+  schema_string: aten::add.out(Tensor self, Tensor other, *, Scalar alpha=1, Tensor(a!) out) -> Tensor(a!)
+  arguments:
+  - allocate: true
+    annotation: a!
+    dynamic_type: at::Tensor
+    is_nullable: false
+    name: out
+    output: true
+    type: at::Tensor &
+  - annotation: null
+    dynamic_type: at::Tensor
+    is_nullable: false
+    name: self
+    type: const at::Tensor &
+  - annotation: null
+    dynamic_type: at::Tensor
+    is_nullable: false
+    name: other
+    type: const at::Tensor &
+  - annotation: null
+    default: 1
+    dynamic_type: const at::Scalar &
+    is_nullable: false
+    kwarg_only: true
+    name: alpha
+    type: const at::Scalar &
+  schema_order_cpp_signature: at::Tensor & (const at::Tensor &, const at::Tensor &, const at::Scalar &, at::Tensor &)
+  schema_order_arguments:
+  - annotation: null
+    dynamic_type: at::Tensor
+    is_nullable: false
+    name: self
+    type: const at::Tensor &
+  - annotation: null
+    dynamic_type: at::Tensor
+    is_nullable: false
+    name: other
+    type: const at::Tensor &
+  - annotation: null
+    default: 1
+    dynamic_type: const at::Scalar &
+    is_nullable: false
+    kwarg_only: true
+    name: alpha
+    type: const at::Scalar &
+  - allocate: true
+    annotation: a!
+    dynamic_type: at::Tensor
+    is_nullable: false
+    name: out
+    output: true
+    type: at::Tensor &
+  method_of:
+  - Type
+  - namespace
+  mode: native
+  python_module: ''
+  returns:
+  - dynamic_type: at::Tensor
+    name: out
+    type: at::Tensor &
+  inplace: false
+  is_factory_method: false
+  abstract: true
+  device_guard: true
+  with_gil: false
+  deprecated: false
+  has_math_kernel: false

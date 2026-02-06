@@ -1,0 +1,12 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "codegen"
+version = "0.0.1"
+description = "FTorch code generation utilities"
+requires-python = ">=3.10" # TODO: Revisit
+dependencies = [
+  "PyYAML",
+]
